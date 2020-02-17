@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 module "detect_deactivate_mfa" {
-  source           = "git@github.com:cloudmitigator/reflex.git//modules/cwe_sns_email"
+  source           = "git@github.com:cloudmitigator/reflex.git//modules/cwe_sns_email?ref=v0.0.1"
   rule_name        = "DetectMFADeactivate"
   rule_description = "Rule to check when MFA Devices are Deactivated"
 
