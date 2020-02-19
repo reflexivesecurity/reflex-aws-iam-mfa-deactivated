@@ -17,7 +17,7 @@ or add it directly to your Terraform:
 ```
 ...
 
-module "enforce-s3-encryption" {
+module "reflex-aws-detect-deactivate-mfa" {
   source           = "github.com/cloudmitigator/reflex-aws-detect-deactivate-mfa"
   email            = "example@example.com"
 }
