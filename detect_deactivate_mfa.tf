@@ -1,5 +1,5 @@
 module "detect_deactivate_mfa" {
-  source           = "git@github.com:cloudmitigator/reflex.git//modules/cwe_sns_email?ref=v0.0.1"
+  source           = "git@github.com:cloudmitigator/reflex.git//modules/cwe_sns_email?ref=v0.2.0"
   rule_name        = "DetectMFADeactivate"
   rule_description = "Rule to check when MFA Devices are Deactivated"
 
@@ -22,7 +22,6 @@ module "detect_deactivate_mfa" {
 }
 PATTERN
 
-  topic_name = "DetectDeactivateMFA"
   target_id  = "DetectDeactivateMFA"
-  email      = var.email
+  sns_topic_arn = var.sns_topic_arn
 }
