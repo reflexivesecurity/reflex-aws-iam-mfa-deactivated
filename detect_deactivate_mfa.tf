@@ -35,7 +35,7 @@ PATTERN
   "Statement": [
     {
       "Action": [
-        "s3:GetEncryptionConfiguration",
+        "s3:GetEncryptionConfiguration"
       ],
       "Effect": "Allow",
       "Resource": "*"
