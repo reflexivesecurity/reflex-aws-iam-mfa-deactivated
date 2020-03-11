@@ -29,22 +29,6 @@ PATTERN
   environment_variable_map = {
     SNS_TOPIC = var.sns_topic_arn
   }
-  custom_lambda_policy = <<EOF
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": [
-        "s3:GetEncryptionConfiguration"
-      ],
-      "Effect": "Allow",
-      "Resource": "*"
-    }
-  ]
-}
-EOF
-
-
 
   queue_name    = "DetectDeactivateMFA"
   delay_seconds = 60
