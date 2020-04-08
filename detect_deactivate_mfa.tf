@@ -31,7 +31,7 @@ PATTERN
   }
 
   queue_name    = "DetectDeactivateMFA"
-  delay_seconds = 60
+  delay_seconds = 0
 
   target_id = "DetectDeactivateMFA"
 
