@@ -24,7 +24,7 @@ PATTERN
 
   function_name   = "DetectDeactivateMFA"
   source_code_dir = "${path.module}/source"
-  handler         = "deactivate_mfa.lambda_handler"
+  handler         = "iam_mfa_deactivated.lambda_handler"
   lambda_runtime  = "python3.7"
   environment_variable_map = {
     SNS_TOPIC = var.sns_topic_arn
