@@ -5,7 +5,7 @@ import json
 from reflex_core import AWSRule
 
 
-class DeactivateMFARule(AWSRule):
+class IamMfaDeactivated(AWSRule):
     """ AWS rule for detecting MFA deactivation """
 
     def __init__(self, event):
@@ -29,5 +29,5 @@ class DeactivateMFARule(AWSRule):
 
 def lambda_handler(event, _):
     """ Handles the incoming event """
-    rule = DeactivateMFARule(json.loads(event["Records"][0]["body"]))
+    rule = IamMfaDeactivated(json.loads(event["Records"][0]["body"]))
     rule.run_compliance_rule()
