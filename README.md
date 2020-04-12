@@ -1,4 +1,4 @@
-# reflex-aws-detect-deactivate-mfa
+# reflex-aws-iam-mfa-deactivated
 A Reflex rule for detecting the deactivation of an MFA device for an IAM user.
 
 To learn more about IAM user MFA, see [the AWS Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa.html)
@@ -18,7 +18,7 @@ rules:
 or add it directly to your Terraform:  
 ```
 module "detect-deactivate-mfa" {
-  source            = "git::https://github.com/cloudmitigator/reflex-aws-detect-deactivate-mfa.git?ref=latest"
+  source            = "git::https://github.com/cloudmitigator/reflex-aws-iam-mfa-deactivated.git?ref=latest"
   sns_topic_arn     = module.central-sns-topic.arn
   reflex_kms_key_id = module.reflex-kms-key.key_id
 }
@@ -33,4 +33,4 @@ This rule has no configuration options.
 If you are interested in contributing, please review [our contribution guide](https://docs.cloudmitigator.com/about/contributing.html).
 
 ## License
-This Reflex rule is made available under the MPL 2.0 license. For more information view the [LICENSE](https://github.com/cloudmitigator/reflex-aws-detect-deactivate-mfa/blob/master/LICENSE) 
+This Reflex rule is made available under the MPL 2.0 license. For more information view the [LICENSE](https://github.com/cloudmitigator/reflex-aws-iam-mfa-deactivated/blob/master/LICENSE) 
