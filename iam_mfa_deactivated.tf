@@ -1,4 +1,4 @@
-module "detect_deactivate_mfa" {
+module "iam_mfa_deactivated" {
   source           = "git::https://github.com/cloudmitigator/reflex-engine.git//modules/cwe_lambda?ref=v0.5.7"
   rule_name        = "DetectDeactivateMFA"
   rule_description = "Rule to check when MFA Devices are Deactivated"
