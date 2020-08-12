@@ -18,3 +18,8 @@ variable "reflex_kms_key_id" {
   type        = string
 }
 
+variable "package_location" {
+  description = "Path for the Lambda deployment package"
+  type        = string
+  default     = "../package_build/iam-mfa-deactivated.zip"
+}
